@@ -75,10 +75,11 @@ int main(int argc, char *argv[]){
     Mat saida;
     drawMatches(imgA,kpA,imgB,kpB,matches,saida, Scalar::all(-1), Scalar::all(-1),
                 vector<char>(), DrawMatchesFlags::DEFAULT);
-    imshow("Resultado",saida);
-    waitKey();
+//    imshow("Resultado",saida);
+//    waitKey();
 
-    printf("%s %s %s %s %d \n",a.c_str(),b.c_str(),detect.c_str(),describ.c_str(),matches.size());
+    printf("%s %s %s %s %d %d %d \n",a.c_str(),b.c_str(),detect.c_str(),
+           describ.c_str(),kpA.size(),kpB.size(),matches.size());
 
     return 0;
 }
