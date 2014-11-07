@@ -78,7 +78,7 @@ int main(int argc, char *argv[]){
 //    imshow("Resultado",saida);
 //    waitKey();
 
-    printf("%s %s %s %s %d %d %d \n",a.c_str(),b.c_str(),detect.c_str(),
+    printf("%s\t%s\t%s\t%s\t%d\t%d\t%d\t\n",a.c_str(),b.c_str(),detect.c_str(),
            describ.c_str(),kpA.size(),kpB.size(),matches.size());
 
     return 0;
