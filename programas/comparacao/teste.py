@@ -22,4 +22,4 @@ for a in det:
 							teta = y[0]+y[1]
 
 						#print teta
-						open(teta)
+						popen(teta)
