@@ -12,6 +12,6 @@ for a in det:
 				base = open("base.txt")
 				for b in base:
 					if len(b) > 1:
-						txt = str("./comparacao/compara {0} {1} {2} {3} >> resultado.txt".format(t,b,a,d))
+						txt = str("./src/compara {0} {1} {2} {3} >> resultado.txt".format(t,b,a,d))
 						print txt
 						popen(txt)
