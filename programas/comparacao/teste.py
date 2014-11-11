@@ -21,6 +21,5 @@ for a in det:
 						else:
 							teta = y[0]+y[1]
 
-						print teta
-
-						popen(teta)
+						#print teta
+						open(teta)
