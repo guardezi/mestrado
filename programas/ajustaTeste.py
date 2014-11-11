@@ -1,4 +1,5 @@
 #!/bin/python
+from os import popen
 
 saida = open("run.sh",'w')
 
@@ -13,12 +14,6 @@ for a in det:
 				base = open("../testes/base.txt")
 				for b in base:
 					if len(b) > 1:
-						print "./comparacao/compara {} {} {} {}".format(t,b,a,d)
-						saida.write("./comparacao/compara {} {} {} {}\n".format(t,b,a,d))
-
-
-
-#for b in teste:
-#	if len(b) > 1:
-#		print b
-
+						txt = str("./comparacao/compara {} {} {} {} >>resultado.txt".format(t,b,a,d))
+						print txt
+						popen(txt)
