@@ -23,4 +23,4 @@ for a in det:
 
 						print teta
 
-						popen(txt)
+						popen(teta)
