@@ -4,8 +4,8 @@ import time
 
 ar=(time.strftime("%Y-%m-%d"))+"_"+(time.strftime("%I-%M-%S"))
 
-det = ["HARRIS"]
-desc = ["SIFT"]
+det = ["HARRIS","MSER","SURF","IGFTT","SIFT","ORB"]
+desc = ["SIFT","SURF"]
 
 for a in det:
 	for d in desc:

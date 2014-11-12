@@ -24,11 +24,11 @@ if __name__ == '__main__':
 
 	harris = []
 	mser =[]
-
+	dic = {}
 	ultimo="vazio"
 	cont=0
 	txt=""
-	print txt
+	# print txt
 
 	for arq in arquivo:
 		ponto = arq.split(".")
@@ -50,42 +50,36 @@ if __name__ == '__main__':
 			if imgA != ultimo:
 				# print cont
 				if cont != 0:
-					if detector == "HARRIS":
-						harris.append(ordena(txt))
-					if detector == "MSER":
-						mser.append(ordena(txt))
+					if detector not in dic.keys():
+						dic[detector]=[]
+						dic[detector].append([0,0])
+					dic[detector].append(ordena(txt))
 					
 				ultimo = imgA
 				cont +=1
 				txt=imgA+"\t"+imgB+"\t"+match
 			else:
 				txt = txt + "\n" + imgA+"\t"+imgB+"\t"+match
-	c=int(0)
-	e=int(0)
-	for i in xrange(0,len(harris)):
-		a = harris[i][len(harris[i])-1]
-		if a[0].split("-")[0] == a[1]:
-			# print a[0].split("-")[0]+" "+a[1]+" "+str(a[2])
-			c+=1
-		else :
-			e+=1
-	print "HARRIS + SIFT\ntotal ",(c+e)
-	print "Corretos {} {}%".format(c,(100*c/(c+e)))
-	print "errados {} {}%".format(e,(100*e/(c+e)))
 
-	c=int(0)
-	e=int(0)
-	for i in xrange(0,len(mser)):
-		a = mser[i][len(mser[i])-1]
-		if a[0].split("-")[0] == a[1]:
-			# print a[0].split("-")[0]+" "+a[1]+" "+str(a[2])
-			c+=1
-		else :
-			e+=1
-	print "\nMSER + SIFT\ntotal ",(c+e)
-	print "Corretos {} {}%".format(c,(100*c/(c+e)))
-	print "errados {} {}%".format(e,(100*e/(c+e)))
+	for d in dic.keys():
+		v=dic[d]
+		for i in xrange(1,len(v)-1):
+			t=v[i]
+			x= t[len(t)-1]
+			x[0]=x[0].split("-")[0]
+			# print "{} {} {} ".format(x[0],x[1],x[2])
+			if x[0] == x[1]:
+				(v[0])[0]+=1
+			else:
+				(v[0])[1]+=1			
+		# print "\n"
+		c = (v[0])[0]
+		e = (v[0])[1]
+		print "{} acerto {} %".format(d, (c*100)/(c+e) )
+		print "[c, e]"
+		print v[0]
 
+		
 	arquivoSaida.close()
 
 
