@@ -1,7 +1,10 @@
 #!/bin/python
 from os import popen
+import time
 
-det = ["HARRIS","MSER"]
+ar=(time.strftime("%Y-%m-%d"))+"_"+(time.strftime("%I-%M-%S"))
+
+det = ["HARRIS","MSER","SURF"]
 desc = ["SIFT"]
 
 for a in det:
@@ -12,7 +15,7 @@ for a in det:
 				base = open("base.txt")
 				for b in base:
 					if len(b) > 1:
-						txt = str("./src/compara {0} {1} {2} {3} >> resultado.txt".format(t,b,a,d))
+						txt = str("./src/compara {0} {1} {2} {3} >> resultado-{4}.txt".format(t,b,a,d,ar))
 						
 						y  =txt.split("\n")
 						

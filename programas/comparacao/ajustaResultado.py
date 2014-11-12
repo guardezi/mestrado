@@ -1,4 +1,5 @@
 #!/bin/python
+import sys
 
 def ordena( arquivo ):
 	dic = []
@@ -17,7 +18,8 @@ def ordena( arquivo ):
 	return dic	
 
 if __name__ == '__main__':
-	arquivo = open("resultado.txt")
+	arg=str(sys.argv[1])
+	arquivo = open(arg)
 	arquivoSaida = open("resultadoAjustado.txt",'w')
 
 	harris = []
