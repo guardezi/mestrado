@@ -6,14 +6,10 @@
 /home/guardezi/Documents/dataset/etse02passadis/etse02passadis-pano21-full.png
 /home/guardezi/Documents/dataset/iiia01robot/iiia01robot-pano27-full.png
 /home/guardezi/Documents/dataset/iiia02lab/iiia02lab-pano11-full.png
-/home/guardezi/Documents/dataset/iiia03actes/iiia03actes-pano14-full.png
 /home/guardezi/Documents/dataset/iiia04actes/iiia04actes-pano14-full.png
 /home/guardezi/Documents/dataset/iiia05passadis/iiia05passadis-pano20-full.png
-/home/guardezi/Documents/dataset/iiia06biblioteca/iiia06biblioteca-pano25-full.png
 /home/guardezi/Documents/dataset/iiia07biblioteca/iiia07biblioteca-pano21-full.png
 /home/guardezi/Documents/dataset/iiia08lab/iiia08lab-pano19-full.png
 /home/guardezi/Documents/dataset/iiia09power/iiia09power-pano10-full.png
 /home/guardezi/Documents/dataset/iiia10backdoor/iiia10backdoor-pano21-full.png
 /home/guardezi/Documents/dataset/iiia11menjador/iiia11menjador-pano19-full.png
-/home/guardezi/Documents/dataset/iiia12menjador/iiia12menjador-pano20-full.png
-/home/guardezi/Documents/dataset/iiia13entrada/iiia13entrada-pano21-full.png
