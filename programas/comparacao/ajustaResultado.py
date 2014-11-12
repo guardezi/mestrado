@@ -67,7 +67,7 @@ if __name__ == '__main__':
 			c+=1
 		else :
 			e+=1
-	print "HARRIS\ntotal ",(c+e)
+	print "HARRIS + SIFT\ntotal ",(c+e)
 	print "Corretos {} {}%".format(c,(100*c/(c+e)))
 	print "errados {} {}%".format(e,(100*e/(c+e)))
 
@@ -80,7 +80,7 @@ if __name__ == '__main__':
 			c+=1
 		else :
 			e+=1
-	print "\nMSER\ntotal ",(c+e)
+	print "\nMSER + SIFT\ntotal ",(c+e)
 	print "Corretos {} {}%".format(c,(100*c/(c+e)))
 	print "errados {} {}%".format(e,(100*e/(c+e)))
 
