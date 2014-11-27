@@ -22,7 +22,8 @@ for a in det:
 						if len(y) == 3:
 							teta = y[0]+y[1]+y[2]
 						else:
-							teta = y[0]+y[1]
+							if len(y) == 2:
+								teta = y[0]+y[1]
 
-						#print teta
+						print teta
 						popen(teta)
