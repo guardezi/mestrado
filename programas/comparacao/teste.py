@@ -3,9 +3,12 @@ from os import popen
 import time
 
 ar=(time.strftime("%Y-%m-%d"))+"_"+(time.strftime("%I-%M-%S"))
-
-det = ["HARRIS","MSER","SURF","IGFTT","SIFT","ORB"]
+algs = open("algoritmos.txt","r")
 desc = ["SIFT"]
+
+for a in algs:
+	det = a.split(",")
+print det
 
 for a in det:
 	for d in desc:
@@ -26,4 +29,4 @@ for a in det:
 								teta = y[0]+y[1]
 
 						print teta
-						popen(teta)
+						# popen(teta)
