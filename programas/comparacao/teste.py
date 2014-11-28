@@ -18,7 +18,7 @@ for a in det:
 				base = open("base.txt")
 				for b in base:
 					if len(b) > 1:
-						txt = str("./src/compara {0} {1} {2} {3} >> resultado-{4}.txt".format(t,b,a,d,ar))
+						txt = str("./src/compara {0} {1} {2} {3} >> resultados/resultado-{4}.txt".format(t,b,a,d,ar))
 						
 						y  =txt.split("\n")
 						
@@ -29,4 +29,4 @@ for a in det:
 								teta = y[0]+y[1]
 
 						print teta
-						# popen(teta)
+						popen(teta)
