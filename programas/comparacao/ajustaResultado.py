@@ -77,7 +77,7 @@ if __name__ == '__main__':
 		e = (v[0])[1]
 		print "{} acerto {} %".format(d, (c*100)/(c+e) )
 		print "[c, e]"
-		print v[0]
+		print "{}_{}".format(v[0],(c+e))
 
 		
 	arquivoSaida.close()
