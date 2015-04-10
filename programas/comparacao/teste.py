@@ -3,9 +3,12 @@ from os import popen
 import time
 
 ar=(time.strftime("%Y-%m-%d"))+"_"+(time.strftime("%I-%M-%S"))
-
-det = ["HARRIS","MSER","SURF","IGFTT","SIFT","ORB"]
+algs = open("algoritmos.txt","r")
 desc = ["SIFT"]
+
+for a in algs:
+	det = a.split(",")
+print det
 
 for a in det:
 	for d in desc:
@@ -15,7 +18,8 @@ for a in det:
 				base = open("base.txt")
 				for b in base:
 					if len(b) > 1:
-						txt = str("./src/compara {0} {1} {2} {3} >> resultado-{4}-{5}.txt".format(t,b,a,d,ar,a))
+						#txt = str("./src/compara {0} {1} {2} {3} >> resultado-{4}-{5}.txt".format(t,b,a,d,ar,a))
+						txt = str("./src/compara {0} {1} {2} {3} >> resultados/resultado-{4}.txt".format(t,b,a,d,ar))
 						
 						y  =txt.split("\n")
 						
